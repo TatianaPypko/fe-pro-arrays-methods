@@ -92,14 +92,14 @@ const rangeFilter = (from, to) => {
 
 const minPriceReducer = () => {
   return goods.reduce((acc, item) => {
-    if (acc == 0 || acc >= item.price) acc = item.price;
+    if (acc === 0 || acc >= item.price) acc = item.price;
     return acc;
   }, Infinity)
 };
 
 const maxPriceReducer = () => {
   return goods.reduce((acc, item) => {
-    if (acc == 0 || acc <= item.price) acc = item.price;
+    if (acc === 0 || acc <= item.price) acc = item.price;
     return acc;
   }, 0)
 };
