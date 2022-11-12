@@ -94,7 +94,7 @@ const minPriceReducer = () => {
   return goods.reduce((acc, item) => {
     if (acc == 0 || acc >= item.price) acc = item.price;
     return acc;
-  }, 0)
+  }, Infinity)
 };
 
 const maxPriceReducer = () => {
